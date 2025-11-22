@@ -1,35 +1,74 @@
-# 🐍 Python OOP: Abstract Class & Method Example
-
-## 🎯 AIM
-
-To create an **abstract class** named `Shape` with an **abstract method** `calculate_area`, and implement this method in two subclasses: `Rectangle` and `Circle`.
+# Exp.No:28  
+## Abstraction
 
 ---
 
-## 🧠 ALGORITHM
-
-1. **Import ABC module**:
-   - Use `from abc import ABC, abstractmethod` to define abstract classes and methods.
-
-2. **Create Abstract Class `Shape`**:
-   - Define an abstract method `calculate_area()` with `@abstractmethod`.
-
-3. **Create Subclass `Rectangle`**:
-   - Set default values for `length` and `breadth`.
-   - Override `calculate_area()` to compute the rectangle area.
-
-4. **Create Subclass `Circle`**:
-   - Set default value for `radius`.
-   - Override `calculate_area()` to compute the circle area.
-
-5. **Create Objects & Call Methods**:
-   - Instantiate `Rectangle` and `Circle`.
-   - Call their `calculate_area()` methods.
+### AIM  
+To write a Python program to define the abstract base class named `Polygon` and also define the abstract method. This base class is inherited by various subclasses. Implement the abstract method in each subclass. Create objects of the subclasses and invoke the `sides()` method.
 
 ---
 
-## 💻 Program
+### ALGORITHM
 
-## Output
+1. **Start the Program.**
+2. **Import the ABC class** from the `abc` module to implement abstraction.
+3. **Define the abstract base class Polygon**:
+   - Inherit from `ABC` (Abstract Base Class).
+   - Define an abstract method `sides()` with no implementation.
+4. **Define the Triangle class** that inherits from `Polygon`:
+   - Implement the `sides()` method to print `"Triangle has 3 sides"`.
+5. **Define the Pentagon class** that inherits from `Polygon`:
+   - Implement the `sides()` method to print `"Pentagon has 5 sides"`.
+6. **Define the Hexagon class** that inherits from `Polygon`:
+   - Implement the `sides()` method to print `"Hexagon has 6 sides"`.
+7. **Define the Square class** that inherits from `Polygon`:
+   - Implement the `sides()` method to print `"I have 4 sides"`.
+8. **Create an object `t` of the Triangle class** and call the `sides()` method to print the number of sides.
+9. **Create an object `s` of the Square class** and call the `sides()` method to print the number of sides.
+10. **Create an object `p` of the Pentagon class** and call the `sides()` method to print the number of sides.
+11. **Create an object `k` of the Hexagon class** and call the `sides()` method to print the number of sides.
+12. **End the Program.**
 
-## Result
+---
+
+### PROGRAM
+
+```
+reg no:212223070021
+name:Ragunandhan S
+from abc import ABC, abstractmethod
+
+class Polygon(ABC):
+    @abstractmethod
+    def sides(self):
+        pass
+
+class Triangle(Polygon):
+    def sides(self):
+        print("Triangle has 3 sides.")
+
+class Square(Polygon):
+    def sides(self):
+        print("Square has 4 sides.")
+
+class Pentagon(Polygon):
+    def sides(self):
+        print("Pentagon has 5 sides.")
+
+t = Triangle()
+s = Square()
+p = Pentagon()
+
+t.sides()
+s.sides()
+p.sides()
+
+
+```
+
+### OUTPUT
+![image](https://github.com/user-attachments/assets/0084bd58-322c-417e-99ed-d351694c0591)
+
+
+### RESULT
+thus the program is executed successfully.
